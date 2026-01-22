@@ -252,6 +252,9 @@ class Realm(models.Model):
 
     welcome_message_custom_text = models.TextField(default="")
 
+    # Whether require topic is enabled for the organization.
+    mandatory_topics = models.BooleanField(default=False)
+
     POLICY_MEMBERS_ONLY = 1
     POLICY_ADMINS_ONLY = 2
     POLICY_FULL_MEMBERS_ONLY = 3
@@ -730,6 +733,7 @@ class Realm(models.Model):
         inline_url_embed_preview=bool,
         invite_required=bool,
         jitsi_server_url=str | None,
+        mandatory_topics=bool,
         message_content_allowed_in_email_notifications=bool,
         message_content_edit_limit_seconds=int | None,
         message_content_delete_limit_seconds=int | None,

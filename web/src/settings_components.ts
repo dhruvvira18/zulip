@@ -113,6 +113,7 @@ type RealmSetting = typeof realm;
 export const realm_setting_property_schema = z.union([
     z.keyof(realm_schema),
     z.literal("realm_org_join_restrictions"),
+    z.literal("realm_mandatory_topics"),
 ]);
 type RealmSettingProperty = z.infer<typeof realm_setting_property_schema>;
 

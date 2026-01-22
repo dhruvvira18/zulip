@@ -425,6 +425,7 @@ export const realm_schema = z.object({
         z.record(z.string(), z.object({id: z.number(), name: z.string()})),
         z.object({disabled: z.object({id: z.number(), name: z.string()})}),
     ),
+    realm_mandatory_topics: z.boolean(),
     max_avatar_file_size_mib: z.number(),
     max_channel_folder_description_length: z.number(),
     max_channel_folder_name_length: z.number(),

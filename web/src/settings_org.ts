@@ -1154,6 +1154,9 @@ export function sync_realm_settings(property: string): void {
         case "disallow_disposable_email_addresses":
             property = "org_join_restrictions";
             break;
+        case "mandatory_topics":
+            property = "mandatory_topics";
+            break;
     }
     const $element = $(`#id_realm_${CSS.escape(property)}`);
     if ($element.length > 0) {

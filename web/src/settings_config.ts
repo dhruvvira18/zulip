@@ -1385,3 +1385,7 @@ export const realm_plan_types = {
 };
 
 export const no_folder_selected = -1;
+
+export const realm_all_settings = {
+    mandatory_topics: "id_realm_mandatory_topics",
+};

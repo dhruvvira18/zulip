@@ -98,6 +98,7 @@ def update_realm(
     request: HttpRequest,
     user_profile: UserProfile,
     *,
+    mandatory_topics: Json[bool] | None = None,
     allow_message_editing: Json[bool] | None = None,
     authentication_methods: Json[dict[str, Any]] | None = None,
     avatar_changes_disabled: Json[bool] | None = None,

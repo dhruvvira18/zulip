@@ -131,6 +131,14 @@
             </div>
             <div class="inline-block organization-settings-parent">
                 <div class="input-group">
+                    {{> settings_checkbox
+                    setting_name="realm_mandatory_topics"
+                    prefix="id_"
+                    is_checked=realm_mandatory_topics
+                    label=(t 'Require topics for all messages')}}
+                </div>
+                
+                <div class="input-group">
                     <label for="id_realm_video_chat_provider" class="settings-field-label">
                         {{t 'Call provider' }}
                         {{> ../help_link_widget link="/help/configure-call-provider" }}
